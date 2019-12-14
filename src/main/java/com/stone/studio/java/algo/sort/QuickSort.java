@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 /**
  * 快速排序算法实现
+ * 快速排序先找到pivot元素在最终排序中的位置，这里用第一个元素作为pivot元素；
+ * 再递归[left, pivot-1] 和 [pivot+1, right]
  */
 public class QuickSort {
 
@@ -34,18 +36,18 @@ public class QuickSort {
             return;
         }
 
-        // flag是分隔数，先找出分隔数的位置
-        int flag = numbers[left];
+        // pivot是分隔数，先找出分隔数的位置
+        int pivot = numbers[left];
         int i=left, j=right;
         while(i<j) {
 
             // 从后往前找比分隔数小的, 这里>= 否则数组中有相等元素时会无限循环
-            while(numbers[j] >= flag && i<j) {
+            while(numbers[j] >= pivot && i<j) {
                 --j;
             }
 
             // 从前往后找比分隔数大的
-            while(numbers[i] < flag && i<j) {
+            while(numbers[i] < pivot && i<j) {
                 ++i;
             }
 

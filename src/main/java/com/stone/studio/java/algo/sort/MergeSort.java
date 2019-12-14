@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * 归并排序是先拆分排序再归并
- * 拆分最小粒度是每组一个元素，再两两归并
+ * 拆分最小粒度是每组一个元素，再两两归并 [left, mid] [mid+1, right]
  * 空间复杂度O(N),时间复杂度O(NlogN)
  */
 public class MergeSort {
