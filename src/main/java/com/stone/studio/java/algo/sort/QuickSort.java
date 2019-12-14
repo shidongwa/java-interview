@@ -14,6 +14,13 @@ public class QuickSort {
         QuickSort sort = new QuickSort();
         sort.sort(numbers);
         System.out.println("after sort:" + Arrays.toString(numbers));
+
+        System.out.println("--------------------------------------");
+
+        numbers =  new int[]{3, 1, 99, 30, 21, 30, 7, 9, 56, 10};
+        System.out.println("before sort:" + Arrays.toString(numbers));
+        sort.sort(numbers);
+        System.out.println("after sort:" + Arrays.toString(numbers));
     }
 
     public void sort(int[] numbers) {
@@ -32,8 +39,8 @@ public class QuickSort {
         int i=left, j=right;
         while(i<j) {
 
-            // 从后往前找比分隔数小的
-            while(numbers[j] > flag && i<j) {
+            // 从后往前找比分隔数小的, 这里>= 否则数组中有相等元素时会无限循环
+            while(numbers[j] >= flag && i<j) {
                 --j;
             }
 
