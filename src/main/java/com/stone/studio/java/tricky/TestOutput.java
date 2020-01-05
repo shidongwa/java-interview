@@ -1,4 +1,4 @@
-package com.stone.studio.java.tricy;
+package com.stone.studio.java.tricky;
 
 public class TestOutput {
 
